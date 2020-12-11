@@ -1,2 +1,2 @@
 # docfx_conflict
-Repro the issue with docfx when there is a naming clash between namespace and class.
+Repro the issue with docfx when there is a naming clash between namespace and class - on macOS(Catalina).
