@@ -1,4 +1,8 @@
 ﻿using System;
+
+/// <summary>
+/// documentation for namescape 'member'
+/// </summary>
 namespace docfx_conflict.member
 {
     public class MemberAddress
