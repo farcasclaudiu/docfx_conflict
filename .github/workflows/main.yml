@@ -29,10 +29,9 @@ jobs:
       - name: Run a one-line script
         run: ls
 
-      # Runs a set of commands using the runners shell
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile.action -v ./:/src --tag docfxconflict:$(date +%s)
+        
       - name: Run a multi-line script
         run: |
-          ls /
-      
-      - name: Build the Docker image
-        run: docker build . --file Dockerfile.action --tag docfxconflict:$(date +%s)
+          ls ./docfx_project/api/      
