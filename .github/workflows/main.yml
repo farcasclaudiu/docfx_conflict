@@ -36,4 +36,9 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          ls ./docfx_project/api/      
+          ls ./docfx_project/api/
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: docgen
+          path: ./docfx_project/_site/
