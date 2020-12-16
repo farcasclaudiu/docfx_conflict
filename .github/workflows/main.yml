@@ -33,3 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls /
+      
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag docfxconflict:$(date +%s)
