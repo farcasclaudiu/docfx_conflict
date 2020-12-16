@@ -35,4 +35,4 @@ jobs:
           ls /
       
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag docfxconflict:$(date +%s)
+        run: docker build . --file Dockerfile.action --tag docfxconflict:$(date +%s)
