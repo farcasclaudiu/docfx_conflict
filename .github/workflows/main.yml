@@ -30,7 +30,9 @@ jobs:
         run: ls
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile.action -v ./:/src --tag docfxconflict:$(date +%s)
+        run: |
+          docker build . --file Dockerfile.action -v ./:/src --tag docfxconflict:latest
+          docker run --name docfxconflict --rm -v $(pwd):/src docfxconflict:latest 
         
       - name: Run a multi-line script
         run: |
