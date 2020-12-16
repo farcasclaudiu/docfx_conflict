@@ -49,3 +49,21 @@ Error:
   at Microsoft.DocAsCode.Metadata.ManagedReference.ExtractMetadataWorker.SaveAllMembersFromCacheAsync () [0x00be1] in <5c540df9fbb940bba18cdc38a60fa384>:0
   at Microsoft.DocAsCode.Metadata.ManagedReference.ExtractMetadataWorker.ExtractMetadataAsync () [0x000c0] in <5c540df9fbb940bba18cdc38a60fa384>:0
 ```
+
+## docker run with github actions
+
+https://github.com/farcasclaudiu/docfx_conflict/runs/1567179845?check_suite_focus=true#step:6:6
+
+```shell
+Run actions/upload-artifact@v2
+Uploads are case insensitive: /home/runner/work/docfx_conflict/docfx_conflict/docfx_project/_site/api/docfx_conflict.member.html was detected that it will be overwritten by another file with the same path
+With the provided path, there will be 30 file(s) uploaded
+Total size of all the files uploaded is 437324 bytes
+Finished uploading artifact docgen. Reported size is 437324 bytes. There were 0 items that failed to upload
+Artifact docgen has been successfully uploaded!
+```
+Artifact:
+
+https://github.com/farcasclaudiu/docfx_conflict/actions/runs/426866005#artifacts
+
+After extraction only one Member file is available because of being overwriten :(
